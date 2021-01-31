@@ -7,7 +7,7 @@ import { FaShareSquare } from "@react-icons/all-files/fa/FaShareSquare";
 const ContentStyles = styled.div`
   box-shadow: 0px -2px 15px black;
   padding-bottom: 2rem;
-  background-color: rgba(230, 255, 247, 1);
+  background-color: #3b4e57;
   .overlay {
     position: relative;
     bottom: 0;
@@ -21,6 +21,8 @@ const ContentStyles = styled.div`
     padding: 2rem;
     text-align: center;
     font-size: 3rem;
+    color:white;
+    font-weight:400;
   }
 `;
 export default function Portfolio() {
