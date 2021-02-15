@@ -1,35 +1,24 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import Nav from "../components/Nav"
+import * as React from "react";
+import Nav from "../components/Nav";
+import styled from "styled-components";
 
 // styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+const HeadingStyles = styled.div`
+  h4 {
+    text-align: center;
+  }
+`;
 
 // markup
 const NotFoundPage = () => {
   return (
-    <Nav />
-  )
-}
+    <>
+      <Nav />
+      <HeadingStyles>
+        <h4>Oops...Page you requested is not available .Go back home</h4>
+      </HeadingStyles>
+    </>
+  );
+};
 
-export default NotFoundPage
+export default NotFoundPage;

@@ -1,11 +1,10 @@
-import React from 'react';
-import Nav from '../components/Nav';
+import React from "react";
+import BlogLayout from "../components/BlogLayout";
 
 export default function BlogOne() {
   return (
     <>
-      <Nav />
-    <h4>blog1</h4>  
+      <BlogLayout />
     </>
-  )
+  );
 }

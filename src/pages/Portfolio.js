@@ -1,83 +1,61 @@
-import React from 'react';
-import styled from 'styled-components';
-import Nav from '../components/Nav';
-import { Card } from '../styles/CardStyles';
-import { FaShareSquare } from "@react-icons/all-files/fa/FaShareSquare";
+import React from "react";
+import Nav from "../components/Nav";
+import {
+  Card,
+  PortfolioContentStyles,
+  ProjectWrapper,
+} from "../styles/potfolioStyles";
+import { v4 as uuid } from "uuid";
 
-const ContentStyles = styled.div`
-  box-shadow: 0px -2px 15px black;
-  padding-bottom: 2rem;
-  background-color: #3b4e57;
-  .overlay {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    transition: all 1s ease;
-    height: 100%;
-    width: 100%;
-  }
-  h3 {
-    padding: 2rem;
-    text-align: center;
-    font-size: 3rem;
-    color:white;
-    font-weight:400;
-  }
-`;
-export default function Portfolio() {
+export default function Portfolio({ data: { allSanityProjects } }) {
   return (
     <>
       <Nav />
-      <ContentStyles>
+      <PortfolioContentStyles>
         <div className="overlay">
-          <h3>Take a look a at my projects</h3>
-          <Card>
-            <div className="head">
-              <h4>GitHub-Users</h4>
-              <a
-                href="https://github.com/raqib-rasheed/github-users-react-app"
-                target="_blank"
-              >
-                <FaShareSquare />
-              </a>
-            </div>
-          </Card>
-          <Card>
-            <div className="head">
-              <h4>Expense-Tracker</h4>
-              <a
-                href="https://github.com/raqib-rasheed/github-users-react-app"
-                target="_blank"
-              >
-                <FaShareSquare />
-              </a>
-            </div>
-          </Card>
-          <Card>
-            <div className="head">
-              <h4>Shop-sharer</h4>
-              <a
-                href="https://github.com/raqib-rasheed/github-users-react-app"
-                target="_blank"
-              >
-                <FaShareSquare />
-              </a>
-            </div>
-          </Card>
-          <Card>
-            <div className="head">
-              <h4>GitHub-Users</h4>
-              <a
-                href="https://github.com/raqib-rasheed/github-users-react-app"
-                target="_blank"
-              >
-                <FaShareSquare />
-              </a>
-            </div>
-          </Card>
+          <h2>Take a look at my projects</h2>
+          {allSanityProjects.nodes.map((project, inx) => {
+            return (
+              <ProjectWrapper alt={inx % 2 === 0}>
+                <h3 key={uuid()}>{project.title}</h3>
+                <div key={uuid()} className="project-description">
+                  <h5 key={uuid()}>{project.description}</h5>
+                </div>
+
+                <Card key={uuid()}>
+                  <a key={uuid()} href={project.projectUrl}>
+                    <img
+                      key={uuid()}
+                      alt=""
+                      className="screenshot-holder"
+                      src={project.mainImage.asset.fluid.src}
+                    />
+                  </a>
+                </Card>
+              </ProjectWrapper>
+            );
+          })}
         </div>
-      </ContentStyles>
+      </PortfolioContentStyles>
     </>
   );
 }
+
+export const query = graphql`
+  query {
+    allSanityProjects {
+      nodes {
+        projectUrl
+        description
+        title
+        mainImage {
+          asset {
+            fluid {
+              src
+            }
+          }
+        }
+      }
+    }
+  }
+`;

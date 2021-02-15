@@ -1,12 +1,19 @@
 import React from "react";
-import Nav from "../components/Nav";
+import BlogLayout from "../components/BlogLayout";
 
-export default function BlogFour() {
+export default function BlogFour({ data }) {
   return (
     <>
-      <Nav />
-
-      <h4>blog4</h4>
+      <BlogLayout data={data} />
     </>
   );
 }
+export const query = graphql`
+  query {
+    sanityPost(title: { regex: "/react hooks/i" }) {
+      body
+      title
+      description
+    }
+  }
+`;

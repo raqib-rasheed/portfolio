@@ -1,11 +1,19 @@
 import React from "react";
-import Nav from "../components/Nav";
+import BlogLayout from "../components/BlogLayout";
 
-export default function BlogThree() {
+export default function BlogThree({ data }) {
   return (
     <>
-      <Nav />
-      <h4>blog3</h4>
+      <BlogLayout data={data} />
     </>
   );
 }
+export const query = graphql`
+  query {
+    sanityPost(title: { regex: "/semantic html/i" }) {
+      body
+      title
+      description
+    }
+  }
+`;

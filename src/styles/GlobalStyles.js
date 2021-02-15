@@ -1,7 +1,4 @@
-import React from 'react';
-import styled, { createGlobalStyle } from "styled-components";
-
-
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
 :root {
@@ -26,5 +23,22 @@ const GlobalStyles = createGlobalStyle`
     border-color: rgba(0,0,0,0.1);
     border-width: 1px;
   }
-  `;
-  export default GlobalStyles;
+  ::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(128, 128, 128);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #000;
+}
+`;
+export default GlobalStyles;

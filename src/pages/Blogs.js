@@ -1,11 +1,13 @@
-import Nav from '../components/Nav';
+import Nav from "../components/Nav";
 import * as React from "react";
-import { Link } from 'gatsby';
-import { Container, TopicHighlight, Topics } from '../styles/BlogsStyles';
+import { Link } from "gatsby";
+import { Container, TopicHighlight, Topics } from "../styles/BlogsStyles";
+import blogsArray from "../elemets/blogsDetailsArray";
+import { v4 as uuid } from "uuid";
+import { showDescription } from "../utils/blogDesplayDescription";
 
-
-
-export default function Blogs() {
+export default function Blogs({ data }) {
+  const [blogDetails, setblogDetails] = React.useState("");
   return (
     <>
       <Nav />
@@ -13,29 +15,44 @@ export default function Blogs() {
         <TopicHighlight>
           <div className="container">
             <h3>My coding Journey</h3>
+            <Link to={blogDetails.to}>
+              <div className="blog-details-container">
+                <h4>{blogDetails.title}</h4>
+                <p>{blogDetails.description}</p>
+              </div>
+            </Link>
           </div>
         </TopicHighlight>
         <Topics>
-          <h3>Take a look!!!!!</h3>
           <ul>
-            <li>
-              <Link to="/blog1">First line of code</Link>
-            </li>
-            <li>
-              <Link to="/blog2">FlexBox</Link>
-            </li>
-            <li>
-              <Link to="/blog3">Semantic HTML and Accessibility</Link>
-            </li>
-            <li>
-              <Link to="/blog4">React Hooks</Link>
-            </li>
-            <li>
-              <Link to="/blog5">Authentication and Authorization</Link>
-            </li>
+            {blogsArray.map((blog) => (
+              <li key={uuid()}>
+                <Link
+                  onMouseEnter={(e) => showDescription(e, data, setblogDetails)}
+                  key={uuid()}
+                  id={blog.title}
+                  to={blog.to}
+                >
+                  {blog.title}
+                </Link>
+              </li>
+            ))}
           </ul>
         </Topics>
       </Container>
     </>
   );
-} 
+}
+
+export const query = graphql`
+  query blogContents {
+    allSanityPost {
+      nodes {
+        description
+        body
+        id
+        title
+      }
+    }
+  }
+`;

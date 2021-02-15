@@ -1,11 +1,19 @@
 import React from "react";
-import Nav from "../components/Nav";
+import BlogLayout from "../components/BlogLayout";
 
-export default function BlogFive() {
+export default function BlogFive({ data }) {
   return (
     <>
-      <Nav />
-      <h4>blog5</h4>
+      <BlogLayout data={data} />
     </>
   );
 }
+export const query = graphql`
+  query {
+    sanityPost(title: { regex: "/authentication/i" }) {
+      body
+      title
+      description
+    }
+  }
+`;

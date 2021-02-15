@@ -1,11 +1,20 @@
 import React from "react";
-import Nav from "../components/Nav";
+import BlogLayout from "../components/BlogLayout";
 
-export default function BlogTwo() {
+export default function BlogTwo({ data }) {
   return (
     <>
-      <Nav />
-      <h4>blog2</h4>
+      <BlogLayout data={data} />
     </>
   );
 }
+
+export const query = graphql`
+  query {
+    sanityPost(title: { regex: "/flexbox/i" }) {
+      body
+      title
+      description
+    }
+  }
+`;
