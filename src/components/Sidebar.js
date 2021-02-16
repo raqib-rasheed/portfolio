@@ -13,13 +13,13 @@ const SidebarStyled = styled.div`
     position: fixed;
     overflow-y: hidden;
     background-color: black;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     transition: width 0.75s ease-in;
     -webkit-transition: width 0.75s ease-in;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     text-decoration: none;
     list-style: none;
   }
@@ -27,12 +27,12 @@ const SidebarStyled = styled.div`
     position: absolute;
     top: 2%;
     left: 92%;
+    cursor: pointer;
   }
   @media (max-width: 600px) {
     .button-close {
       top: 2%;
       left: 88%;
-      cursor: pointer;
     }
   }
   li {
@@ -49,9 +49,12 @@ const SidebarStyled = styled.div`
       }
     }
   }
+  .disabled {
+    pointer-events: none;
+    opacity: 0.6;
+  }
   .closed {
     width: 0%;
-    visibility: hidden;
   }
 `;
 
@@ -67,21 +70,21 @@ export default function Sidebar({ toggled, setToggled }) {
             Home
           </Link>
         </li>
-        <li>
+        {/* <li className="disabled">
           <Link onClick={() => setToggled(true)} to="/Blogs/">
             Blogs
-          </Link>
-        </li>
+          </Link> 
+        </li> */}
         <li>
           <Link onClick={() => setToggled(true)} to="/Portfolio">
             Portfolio
           </Link>
         </li>
-        <li>
+        {/* <li className="disabled">
           <Link onClick={() => setToggled(true)} to="/Skills">
             Skills
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link onClick={() => setToggled(true)} to="/Aboutme">
             About Me

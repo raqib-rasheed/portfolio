@@ -15,6 +15,7 @@ export default function Portfolio({ data: { allSanityProjects } }) {
         <div className="overlay">
           <h2>Take a look at my projects</h2>
           {allSanityProjects.nodes.map((project, inx) => {
+            console.log(project);
             return (
               <ProjectWrapper alt={inx % 2 === 0}>
                 <h3 key={uuid()}>{project.title}</h3>
@@ -23,7 +24,7 @@ export default function Portfolio({ data: { allSanityProjects } }) {
                 </div>
 
                 <Card key={uuid()}>
-                  <a key={uuid()} href={project.projectUrl}>
+                  <a key={uuid()} href={project.GitHubUrl}>
                     <img
                       key={uuid()}
                       alt=""
@@ -43,11 +44,12 @@ export default function Portfolio({ data: { allSanityProjects } }) {
 
 export const query = graphql`
   query {
-    allSanityProjects {
+    allSanityProjects(sort: { fields: sequencenumber }) {
       nodes {
         projectUrl
         description
         title
+        GitHubUrl
         mainImage {
           asset {
             fluid {

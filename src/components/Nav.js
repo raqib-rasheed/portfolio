@@ -26,6 +26,9 @@ export default function Nav() {
             <li>
               <Link to="/">Home</Link>
             </li>
+            <li>
+              <Link to="/Aboutme">About Me</Link>
+            </li>
             {/* <li>
               <Link to="/Blogs/">Blogs</Link>
             </li> */}

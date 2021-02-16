@@ -22,6 +22,9 @@ export const Card = styled.div`
   @media (max-width: 650px) {
     height: 18rem;
   }
+  @media (max-width: 650px) {
+    height: 14rem;
+  }
 
   .screenshot-holder {
     width: 100%;

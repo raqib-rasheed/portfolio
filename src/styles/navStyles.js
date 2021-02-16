@@ -34,21 +34,21 @@ const StyledNav = styled.ul`
     }
   }
   .nav-links-container {
-    width: 35%;
+    width: 55%;
     display: flex;
     justify-content: space-around;
-    overflow-x: hidden;
     @media (max-width: 600px) {
+      font-size: 1rem;
       padding: 2rem;
-      width: 70%;
+      width: 100%;
       justify-content: space-between;
     }
-    @media (max-width: 300px) {
+    @media (max-width: 460px) {
       display: none;
     }
 
     @media (min-width: 1000px) {
-      width: 25%;
+      width: 55%;
     }
   }
 `;
