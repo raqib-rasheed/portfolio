@@ -77,6 +77,9 @@ export const PortfolioContentStyles = styled.div`
   @media (max-width: 500px) {
     font-size: 17px;
   }
+  @media (max-width: 400px) {
+    font-size: 13px;
+  }
   @media (min-width: 1000px) {
     font-size: 24px;
   }

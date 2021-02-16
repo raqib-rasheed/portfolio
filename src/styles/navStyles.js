@@ -39,7 +39,16 @@ const StyledNav = styled.ul`
     justify-content: space-around;
     overflow-x: hidden;
     @media (max-width: 600px) {
+      padding: 2rem;
+      width: 70%;
+      justify-content: space-between;
+    }
+    @media (max-width: 300px) {
       display: none;
+    }
+
+    @media (min-width: 1000px) {
+      width: 25%;
     }
   }
 `;
