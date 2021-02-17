@@ -8,15 +8,13 @@ const BlogContents = styled.div`
 `;
 
 export default function BlogLayout({ data }) {
-  const {
-    sanityPost: { body: content },
-  } = data;
+  // const {
+  //   sanityPost: { body: content },
+  // } = data;
   return (
     <>
       <Nav />
-      <BlogContents>
-        <p>{content}</p>
-      </BlogContents>
+      <BlogContents>{/* <p>{content}</p> */}</BlogContents>
     </>
   );
 }
