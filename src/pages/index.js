@@ -24,7 +24,7 @@ const HomePage = () => {
             </a>
           ))}
         </div>
-        <h4> Front - end developer </h4>
+        <h4> Frontend developer </h4>
       </HomePageStyled>
     </div>
   );
