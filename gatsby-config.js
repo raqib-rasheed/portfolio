@@ -1,8 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: "my-portfolio",
+    title: "raqib's_portfolio",
+    siteUrl: "https://raqib.dev",
+    description: "A Frontend developer",
+    twitter: "https://twitter.com/raqib__rasheed",
   },
   plugins: [
+    "gatsby-plugin-react-helmet",
     "gatsby-plugin-styled-components",
     {
       resolve: "gatsby-source-sanity",

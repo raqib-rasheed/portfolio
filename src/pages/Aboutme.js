@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Nav from "../components/Nav";
 import { Link } from "gatsby";
+import SEO from "../components/SEO";
+import avatars from "../images/avatars.png";
 
 const StyledAboutMe = styled.div`
   box-shadow: 0px -2px 15px black;
@@ -42,8 +44,8 @@ export default function Aboutme({
   const contetArray = aboutmeContent.nodes[0]._rawBody[0].children;
   return (
     <>
+      <SEO title="About Me" image={avatars && avatars} />
       <Nav />
-
       <StyledAboutMe>
         <h2> About Me</h2>
         <div className="content-wrapper">

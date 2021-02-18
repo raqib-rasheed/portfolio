@@ -6,10 +6,12 @@ import {
   ProjectWrapper,
 } from "../styles/potfolioStyles";
 import { v4 as uuid } from "uuid";
+import SEO from "../components/SEO";
 
 export default function Portfolio({ data: { allSanityProjects } }) {
   return (
     <>
+      <SEO title="Raqib's Portfolio" />
       <Nav />
       <PortfolioContentStyles>
         <div className="overlay">
