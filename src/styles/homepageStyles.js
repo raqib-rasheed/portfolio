@@ -8,6 +8,10 @@ const HomePageStyled = styled.div`
   align-items: center;
   justify-content: center;
 
+  @media (max-width: 600px) {
+    margin-top: 4rem;
+  }
+
   h2 {
     margin: 0;
     padding: 0;

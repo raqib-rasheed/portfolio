@@ -17,6 +17,7 @@ export default function Portfolio({ data: { allSanityProjects } }) {
         <div className="overlay">
           <h2>Take a look at my projects</h2>
           {allSanityProjects.nodes.map((project, inx) => {
+            debugger;
             return (
               <ProjectWrapper alt={inx % 2 === 0}>
                 <h3 key={uuid()}>{project.title}</h3>
