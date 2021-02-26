@@ -26,7 +26,7 @@ export default function Portfolio({ data: { allSanityProjects } }) {
                 </div>
 
                 <Card key={uuid()}>
-                  <a key={uuid()} href={project.projectUrl}>
+                  <a key={uuid()} href={project.projectUrl} target="_blank">
                     <img
                       key={uuid()}
                       alt=""
