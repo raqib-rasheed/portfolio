@@ -62,7 +62,11 @@ export default function Sidebar({ toggled, setToggled }) {
   return (
     <SidebarStyled>
       <ul className={toggled ? "closed" : ""}>
-        <span className="button-close" onClick={() => setToggled(true)}>
+        <span
+          className="button-close"
+          onClick={() => setToggled(true)}
+          onKeyDown=""
+        >
           <BsX color="white" size="4rem" />
         </span>
         <li>
@@ -76,7 +80,7 @@ export default function Sidebar({ toggled, setToggled }) {
           </Link> 
         </li> */}
         <li>
-          <Link onClick={() => setToggled(true)} to="/Portfolio">
+          <Link onClick={() => setToggled(true)} to="/Projects">
             Portfolio
           </Link>
         </li>
@@ -86,7 +90,7 @@ export default function Sidebar({ toggled, setToggled }) {
           </Link>
         </li> */}
         <li>
-          <Link onClick={() => setToggled(true)} to="/Aboutme">
+          <Link onClick={() => setToggled(true)} to="/Aboutme" onKeyDown="">
             About Me
           </Link>
         </li>

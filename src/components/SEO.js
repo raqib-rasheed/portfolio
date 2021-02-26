@@ -1,5 +1,4 @@
 import { graphql, useStaticQuery } from "gatsby";
-import { title } from "process";
 import React from "react";
 import { Helmet } from "react-helmet";
 import avatars from "../images/avatars.png";

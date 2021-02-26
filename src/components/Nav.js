@@ -33,7 +33,7 @@ export default function Nav() {
               <Link to="/Blogs/">Blogs</Link>
             </li> */}
             <li>
-              <Link to="/Portfolio">Portfolio</Link>
+              <Link to="/Projects">Portfolio</Link>
             </li>
           </div>
           {/* <DarkLightMode /> */}
