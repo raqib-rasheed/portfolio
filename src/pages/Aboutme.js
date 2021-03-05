@@ -51,7 +51,7 @@ export default function Aboutme({
         <div className="content-wrapper">
           <p>
             {contetArray[0].text}
-            <Link to="/Portfolio">{contetArray[1].text}</Link>
+            <Link to="/Projects">{contetArray[1].text}</Link>
           </p>
           <p>{contetArray[2].text}</p>
         </div>
