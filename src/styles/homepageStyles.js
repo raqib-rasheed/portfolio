@@ -2,14 +2,15 @@ import styled from "styled-components";
 
 const HomePageStyled = styled.div`
   width: 100%;
-  margin-top: 8rem;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 
   @media (max-width: 600px) {
-    margin-top: 4rem;
+    height: 75vh;
   }
 
   h2 {

@@ -81,7 +81,7 @@ export default function Sidebar({ toggled, setToggled }) {
         </li> */}
         <li>
           <Link onClick={() => setToggled(true)} to="/Projects">
-            Portfolio
+            Projects
           </Link>
         </li>
         {/* <li className="disabled">

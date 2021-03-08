@@ -29,7 +29,6 @@ const StyledNav = styled.ul`
 
     img:hover {
       cursor: pointer;
-      color: grey;
       transform: rotate(90deg);
     }
   }
