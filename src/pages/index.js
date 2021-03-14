@@ -1,14 +1,12 @@
 import * as React from "react";
 import Nav from "../components/Nav";
 import avatar from "../images/avatars.png";
-
 import iconsArray from "../elemets/homeSocialmediaiconsArray";
 import { v4 as uuid } from "uuid";
 import HomePageStyled from "../styles/homepageStyles";
 import SEO from "../components/SEO";
 import avatars from "../images/avatars.png";
 
-// markup
 
 const HomePage = () => {
   return (
@@ -28,7 +26,7 @@ const HomePage = () => {
               </a>
             ))}
           </div>
-          <h4> Frontend developer </h4>
+          <h3> Frontend developer </h3>
         </HomePageStyled>
       </div>
     </>

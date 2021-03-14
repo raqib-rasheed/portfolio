@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ProjectWrapper = styled.div`
   width: 40%;
   margin: 0 auto;
-  padding: 1rem 4rem;
+  padding: 1rem 3rem;
   background-color: ${(props) =>
     props.alt ? "rgba(64, 63, 63,0.26)" : "rgb(33, 32, 32)"};
 `;
@@ -11,7 +11,7 @@ export const ProjectWrapper = styled.div`
 export const Card = styled.div`
   position: relative;
   overflow-y: hidden;
-  height: 23rem;
+  height: 18rem;
   width: 100%;
   max-width: 45rem;
   margin: 0 auto;
@@ -20,10 +20,10 @@ export const Card = styled.div`
   margin-bottom: 4.5rem;
   display: flex;
   @media (max-width: 650px) {
-    height: 18rem;
+    height: 15rem;
   }
   @media (max-width: 650px) {
-    height: 14rem;
+    height: 12rem;
   }
 
   .screenshot-holder {
@@ -45,9 +45,9 @@ export const Card = styled.div`
 `;
 export const PortfolioContentStyles = styled.div`
   box-shadow: 0px -2px 15px black;
-  padding-bottom: 2rem;
+  padding-bottom: 1.75rem;
   background-color: rgba(0, 0, 0, 0.88);
-  /* background-color: rgba(176, 16, 77, 0.68); */
+
   .overlay {
     position: relative;
     bottom: 0;
@@ -72,7 +72,7 @@ export const PortfolioContentStyles = styled.div`
     color: rgba(210, 255, 255, 0.9);
   }
   h2 {
-    padding: 2rem;
+    padding: 1.75rem;
     text-align: center;
     color: white;
     font-weight: 400;

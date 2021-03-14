@@ -18,7 +18,7 @@ const HomePageStyled = styled.div`
     padding: 0;
   }
   .avatar-container {
-    width: 15rem;
+    width: 10rem;
     overflow: hidden;
     img {
       max-width: 100%;
@@ -26,14 +26,19 @@ const HomePageStyled = styled.div`
     }
   }
   .icons-group {
-    margin-top: 3rem;
+    margin-top: 2rem;
     a {
       color: black;
       :not(:first-child) {
-        margin-left: 1.25rem;
+        margin-left: 1rem;
+      }
+      svg{
+        font-size:1.25rem;
       }
       svg:hover {
         transform: scale(1.25);
+        border-radius:50%;
+        box-shadow:0 0 0 0.5px black;
       }
     }
   }
