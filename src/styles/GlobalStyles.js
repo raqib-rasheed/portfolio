@@ -8,14 +8,9 @@ const GlobalStyles = createGlobalStyle`
 * {
   -webkit-user-select: none;
   }
-  html {
-    font-size: 10px;
-  }
-
   body {
     margin:0;
     padding:0;
-    font-size: 2rem;
     font-family: 'Oswald', sans-serif;
   }
 

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledNav = styled.ul`
-  padding: 1.25rem 2.5rem !important;
+  padding: 1rem 2rem !important;
   margin: 0;
   overflow-x: hidden !important;
   display: flex;
@@ -12,7 +12,7 @@ const StyledNav = styled.ul`
     a {
       text-decoration: none;
       color: black;
-      font-size: 2.5rem;
+      font-size: 1.75rem;
       :hover {
         color: lightgrey;
       }
@@ -24,7 +24,7 @@ const StyledNav = styled.ul`
     padding: 0;
 
     @media (max-width: 600px) {
-      padding: 2rem;
+      padding: 1.75rem;
     }
 
     img:hover {
@@ -37,12 +37,12 @@ const StyledNav = styled.ul`
     display: flex;
     justify-content: space-around;
     @media (max-width: 600px) {
-      font-size: 1rem;
-      padding: 2rem;
+      font-size: .75rem;
+      padding: 1.75rem;
       width: 100%;
       justify-content: space-between;
     }
-    @media (max-width: 460px) {
+    @media (max-width: 530px) {
       display: none;
     }
 

@@ -28,18 +28,20 @@ const SidebarStyled = styled.div`
     top: 2%;
     left: 92%;
     cursor: pointer;
-  }
   @media (max-width: 600px) {
-    .button-close {
       top: 2%;
       left: 88%;
     }
+  @media (max-width: 600px) {
+      top: 2%;
+      left: 80%;
+  }
   }
   li {
     padding: 0;
     margin: 3rem 0;
     margin-left: 4rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
 
     a {
       color: white;
