@@ -18,16 +18,15 @@ export default function Portfolio({ data: { allSanityProjects } }) {
           <h2>Take a look at my projects</h2>
           {allSanityProjects.nodes.map((project, inx) => {
             return (
-              <ProjectWrapper alt={inx % 2 === 0}>
-                <h3 key={uuid()}>{project.title}</h3>
-                <div key={uuid()} className="project-description">
-                  <h5 key={uuid()}>{project.description}</h5>
+              <ProjectWrapper key={uuid()} alt={(inx % 2 === 0).toString()}>
+                <h3>{project.title}</h3>
+                <div className="project-description">
+                  <h5 >{project.description}</h5>
                 </div>
 
-                <Card key={uuid()}>
-                  <a key={uuid()} href={project.projectUrl} target="_blank">
+                <Card>
+                  <a href={project.projectUrl} target="_blank">
                     <img
-                      key={uuid()}
                       alt=""
                       className="screenshot-holder"
                       src={project.mainImage.asset.fluid.src}

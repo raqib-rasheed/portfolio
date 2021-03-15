@@ -25,10 +25,11 @@ const StyledAboutMe = styled.div`
     padding: 3rem;
   }
   .content-wrapper {
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
     background-color: rgba(64, 63, 63, 0.16);
     padding-bottom: 1rem;
+    border-radius:1rem;
     a {
       color: grey;
     }

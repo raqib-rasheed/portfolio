@@ -5,7 +5,7 @@ export const ProjectWrapper = styled.div`
   margin: 0 auto;
   padding: 1rem 3rem;
   background-color: ${(props) =>
-    props.alt ? "rgba(64, 63, 63,0.26)" : "rgb(33, 32, 32)"};
+    props.alt==="true" ? "rgba(64, 63, 63,0.26)" : "rgb(33, 32, 32)"};
 `;
 
 export const Card = styled.div`
@@ -20,10 +20,10 @@ export const Card = styled.div`
   margin-bottom: 4.5rem;
   display: flex;
   @media (max-width: 650px) {
-    height: 15rem;
+    height: 11rem;
   }
   @media (max-width: 650px) {
-    height: 12rem;
+    height: 9rem;
   }
 
   .screenshot-holder {

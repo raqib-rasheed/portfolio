@@ -10,7 +10,7 @@ const HomePageStyled = styled.div`
   overflow: hidden;
 
   @media (max-width: 600px) {
-    height: 75vh;
+    height: 65vh;
   }
 
   h2 {
@@ -36,9 +36,7 @@ const HomePageStyled = styled.div`
         font-size:1.25rem;
       }
       svg:hover {
-        transform: scale(1.25);
-        border-radius:50%;
-        box-shadow:0 0 0 0.5px black;
+        transform: scale(1.45);
       }
     }
   }
