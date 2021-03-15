@@ -5,8 +5,8 @@ const Layout = ({ location, children }) => {
   return (
     <TransitionProvider location={location}  mode="immediate"
       enter={{
-        opacity: 0,
-        transform: "translate3d(0,20vh,0) scale3d(1, 1, 1) rotate(0deg)",
+        opacity: 0.5,
+        transform: "translate3d(0,20vh,0) scale3d(1.5, 1.5, 1) rotate(0deg)",
         config: {
           mass: 2,
           tension: 240,
