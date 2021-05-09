@@ -12,15 +12,15 @@ const IconHolder = styled.div`
   }
 `;
 
-export default function DarkLightMode() {
-  const [darkmode, setDarkMode] = React.useState(true);
+export default function DarkLightMode({ darkMode, toggleDark }) {
+  console.log(darkMode, toggleDark);
   return (
     <IconHolder>
       <img
-        alt=""
-        onClick={() => setDarkMode(!darkmode)}
+        alt="darkmode-toggler"
+        onClick={toggleDark}
         className="sun"
-        src={darkmode ? sun : moon}
+        src={darkMode ? sun : moon}
       />
     </IconHolder>
   );
