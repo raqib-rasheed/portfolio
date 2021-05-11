@@ -6,12 +6,13 @@ const StyledNav = styled.ul`
   overflow-x: hidden !important;
   display: flex;
   justify-content: space-between;
+  background-color: ${({ darkMode }) => (darkMode ? "black" : "white")};
 
   li {
     list-style: none;
     a {
       text-decoration: none;
-      color: black;
+      color: ${({ darkMode }) => (darkMode ? "white" : "black")};
       font-size: 1.75rem;
       :hover {
         color: lightgrey;
@@ -19,15 +20,18 @@ const StyledNav = styled.ul`
     }
   }
   .toggler-container {
-    height: 2.5rem;
     margin: 0;
     padding: 0;
 
     @media (max-width: 600px) {
       padding: 1.75rem;
     }
+    svg {
+      color: ${({ darkMode }) => (darkMode ? "white" : "black")};
+      font-size: 1.5rem;
+    }
 
-    img:hover {
+    svg:hover {
       cursor: pointer;
       transform: rotate(90deg);
     }
@@ -37,7 +41,7 @@ const StyledNav = styled.ul`
     display: flex;
     justify-content: space-around;
     @media (max-width: 600px) {
-      font-size: .75rem;
+      font-size: 0.75rem;
       padding: 1.75rem;
       width: 100%;
       justify-content: space-between;

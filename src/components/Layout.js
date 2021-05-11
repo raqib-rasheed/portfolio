@@ -8,7 +8,10 @@ export default function Layout({ children }) {
       {(context) => {
         return (
           <>
-            <GlobalStyles darkMode={context.darkMode} /> {children}
+            <GlobalStyles />
+            <div className={context.dark ? "darkTheme" : "lightTheme"}>
+              {children}
+            </div>
           </>
         );
       }}

@@ -4,8 +4,22 @@ export const ProjectWrapper = styled.div`
   width: 40%;
   margin: 0 auto;
   padding: 1rem 3rem;
+  color: ${(props) =>
+    props.alt === "true" ? "black !important" : "white !important"};
   background-color: ${(props) =>
-    props.alt==="true" ? "rgba(64, 63, 63,0.26)" : "rgb(33, 32, 32)"};
+    props.alt === "true" ? "rgb(28,25,26)" : "rgb(193,191,154)"};
+  h5 {
+    color: ${({ alt }) =>
+      alt === "true" ? "white !important" : "black !important"};
+    text-align: center;
+    font-weight: lighter;
+  }
+  h3 {
+    justify-self: end;
+    text-align: center;
+    color: ${({ alt }) =>
+      alt === "true" ? "white !important" : "black !important"};
+  }
 `;
 
 export const Card = styled.div`
@@ -20,9 +34,6 @@ export const Card = styled.div`
   margin-bottom: 4.5rem;
   display: flex;
   @media (max-width: 650px) {
-    height: 11rem;
-  }
-  @media (max-width: 650px) {
     height: 9rem;
   }
 
@@ -34,19 +45,11 @@ export const Card = styled.div`
     left: 0;
     background-size: 100%;
   }
-  svg {
-    color: black;
-    margin-left: 1rem;
-    :hover {
-      color: gray;
-      transform: scale(1.15);
-    }
-  }
 `;
 export const PortfolioContentStyles = styled.div`
-  box-shadow: 0px -2px 15px black;
-  padding-bottom: 1.75rem;
-  background-color: rgba(0, 0, 0, 0.88);
+  background-color: ${({ darkMode }) =>
+    darkMode ? "black !important" : "white !important"};
+  border-top: ${({ darkMode }) => (darkMode ? "0.5px solid #655e5e" : "")};
 
   .overlay {
     position: relative;
@@ -59,22 +62,13 @@ export const PortfolioContentStyles = styled.div`
   }
   .project-description {
     margin: 0 auto;
-
-    h5 {
-      color: white;
-      text-align: center;
-      font-weight: lighter;
-    }
-  }
-  h3 {
-    justify-self: end;
-    text-align: center;
-    color: rgba(210, 255, 255, 0.9);
   }
   h2 {
+    margin: 0;
     padding: 1.75rem;
     text-align: center;
-    color: white;
+    color: ${({ darkMode }) =>
+      darkMode ? "white !important" : "black !important"};
     font-weight: 400;
   }
   @media (max-width: 500px) {
