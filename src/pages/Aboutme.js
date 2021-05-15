@@ -10,20 +10,19 @@ const StyledAboutMe = styled.div`
   padding-bottom: 2rem;
   background-color: ${({ darkMode }) => (darkMode ? "black" : "white")};
   width: 100%;
-  height: 90vh;
-  h2 {
-    color: ${({ darkMode }) => (darkMode ? "white" : "black")};
-    padding: 2rem 0;
-    text-align: center;
-  }
+  height: 80vh;
+  padding-top: 6rem;
   p {
+    font-size: 1.25rem;
     padding: 0 3rem;
     color: ${({ darkMode }) => (darkMode ? "black" : "white")};
   }
   p:first-child {
+    margin: 0;
     padding: 3rem;
   }
   .content-wrapper {
+    box-shadow: 19px 33px 38px -17px black;
     width: 50%;
     margin: 0 auto;
     background-color: ${({ darkMode }) => (darkMode ? "white" : "black")};
@@ -50,7 +49,6 @@ export default function Aboutme({
         {({ darkMode }) => {
           return (
             <StyledAboutMe darkMode={darkMode}>
-              <h2> About Me</h2>
               <div className="content-wrapper">
                 <p>
                   {contetArray[0].text}

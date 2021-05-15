@@ -49,7 +49,6 @@ export const Card = styled.div`
 export const PortfolioContentStyles = styled.div`
   background-color: ${({ darkMode }) =>
     darkMode ? "black !important" : "white !important"};
-  border-top: ${({ darkMode }) => (darkMode ? "0.5px solid #655e5e" : "")};
 
   .overlay {
     position: relative;

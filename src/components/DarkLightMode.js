@@ -12,16 +12,17 @@ const IconHolder = styled.div`
 `;
 
 export default function DarkLightMode({ darkMode, toggleDark }) {
+  function toggleTheme() {
+    toggleDark();
+    window.localStorage.setItem("dark", !darkMode);
+  }
   return (
     <IconHolder>
       {darkMode ? (
-        <BsSun color="white" size="1.5rem" onClick={toggleDark} />
+        <BsSun color="white" size="1.5rem" onClick={toggleTheme} />
       ) : (
-        <BsMoon color="black" size="1.5rem" onClick={toggleDark} />
+        <BsMoon color="black" size="1.5rem" onClick={toggleTheme} />
       )}
     </IconHolder>
   );
 }
-
-//
-//
