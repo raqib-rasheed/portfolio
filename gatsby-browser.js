@@ -1,16 +1,17 @@
 import React from "react";
 import Layout from "./src/components/Layout";
-// import ModeContext  from "./src/components/ModeContext";
+import { ThemeProvider } from "./src/context/ThemeContext";
 
 const shouldUpdateScroll = () => {
   return false;
 };
 
 export function wrapPageElement({ element, props }) {
-  return <Layout {...props}>{element}</Layout>;
+  return (
+    <Layout {...props}>
+      <ThemeProvider>{element}</ThemeProvider>
+    </Layout>
+  );
 }
-// export function wrapRootElement({ element }) {
-//   return <ModeContext>{element}</ModeContext>;
-// }
 
 export { shouldUpdateScroll };

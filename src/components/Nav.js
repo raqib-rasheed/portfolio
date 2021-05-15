@@ -1,8 +1,10 @@
 import { Link } from "gatsby";
 import React from "react";
+import ThemeContext from "../context/ThemeContext";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 import StyledNav from "../styles/navStyles";
-// import DarkLightMode from "./DarkLightMode";
+import DarkLightMode from "./DarkLightMode";
 import Sidebar from "./Sidebar";
 
 export default function Nav() {
@@ -13,34 +15,43 @@ export default function Nav() {
   }
   return (
     <>
-      {toggled ? (
-        <StyledNav>
-          <div className="toggler-container">
-            <img
-              alt=""
-              onClick={displaySidebar}
-              src="https://img.icons8.com/android/24/000000/menu.png"
-            />
-          </div>
-          <div className="nav-links-container">
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/Aboutme">About Me</Link>
-            </li>
-            {/* <li>
+      <ThemeContext.Consumer>
+        {({ darkMode, toggleDark }) => {
+          return (
+            <>
+              {toggled ? (
+                <StyledNav darkMode={darkMode}>
+                  <div className="toggler-container">
+                    <GiHamburgerMenu onClick={displaySidebar} />
+                  </div>
+                  <div className="nav-links-container">
+                    <li>
+                      <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                      <Link to="/Aboutme">About Me</Link>
+                    </li>
+                    {/* <li>
               <Link to="/Blogs/">Blogs</Link>
             </li> */}
-            <li>
-              <Link to="/Projects">Projects</Link>
-            </li>
-          </div>
-          {/* <DarkLightMode /> */}
-        </StyledNav>
-      ) : (
-        <Sidebar toggled={toggled} setToggled={setToggled} />
-      )}
+                    <li>
+                      <Link to="/Projects">Projects</Link>
+                    </li>
+                  </div>
+
+                  <DarkLightMode toggleDark={toggleDark} darkMode={darkMode} />
+                </StyledNav>
+              ) : (
+                <Sidebar
+                  darkMode={darkMode}
+                  toggled={toggled}
+                  setToggled={setToggled}
+                />
+              )}
+            </>
+          );
+        }}
+      </ThemeContext.Consumer>
     </>
   );
 }
