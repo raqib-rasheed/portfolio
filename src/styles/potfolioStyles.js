@@ -7,7 +7,7 @@ export const ProjectWrapper = styled.div`
   color: ${(props) =>
     props.alt === "true" ? "black !important" : "white !important"};
   background-color: ${(props) =>
-    props.alt === "true" ? "rgb(28,25,26)" : "rgb(193,191,154)"};
+    props.alt === "true" ? "rgb(28,25,26)" : "rgba(240, 240, 240 ,0.83)"};
   h5 {
     color: ${({ alt }) =>
       alt === "true" ? "white !important" : "black !important"};
