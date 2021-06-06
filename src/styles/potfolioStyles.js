@@ -7,7 +7,7 @@ export const ProjectWrapper = styled.div`
   color: ${(props) =>
     props.alt === "true" ? "black !important" : "white !important"};
   background-color: ${(props) =>
-    props.alt === "true" ? "rgb(28,25,26)" : "rgb(193,191,154)"};
+    props.alt === "true" ? "rgb(28,25,26)" : "rgba(240, 240, 240 ,0.83)"};
   h5 {
     color: ${({ alt }) =>
       alt === "true" ? "white !important" : "black !important"};
@@ -78,5 +78,22 @@ export const PortfolioContentStyles = styled.div`
   }
   @media (min-width: 1000px) {
     font-size: 24px;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgb(128, 128, 128);
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(128, 128, 128, 0.33);
   }
 `;

@@ -1,11 +1,11 @@
 import * as React from "react";
 import Nav from "../components/Nav";
-import avatar from "../images/avatars.png";
+import avatar from "../images/avatars.webp";
 import iconsArray from "../elemets/homeSocialmediaiconsArray";
 import { v4 as uuid } from "uuid";
 import HomePageStyled from "../styles/homepageStyles";
 import SEO from "../components/SEO";
-import avatars from "../images/avatars.png";
+import avatars from "../images/avatars.webp";
 import ThemeContext from "../context/ThemeContext";
 
 const HomePage = () => {
@@ -19,7 +19,12 @@ const HomePage = () => {
               <HomePageStyled darkMode={context.darkMode}>
                 <p> Hey, I'm</p> <h2> Raqib Rasheed </h2>
                 <div className="avatar-container">
-                  <img src={avatar} alt="avataar" />
+                  <img
+                    width="150px"
+                    height="159px"
+                    src={avatar}
+                    alt="avataar"
+                  />
                 </div>
                 <div className="icons-group">
                   {iconsArray.map((icon) => (
@@ -27,7 +32,8 @@ const HomePage = () => {
                       key={uuid()}
                       href={icon.href}
                       rel="noreferrer"
-                      target="blank">
+                      target="blank"
+                    >
                       {icon.icon}
                     </a>
                   ))}

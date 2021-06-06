@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import { Helmet } from "react-helmet";
-import avatars from "../images/avatars.png";
+import avatars from "../images/avatars.webp";
 
 export default function SEO({ children, title, location, description }) {
   const { site } = useStaticQuery(graphql`

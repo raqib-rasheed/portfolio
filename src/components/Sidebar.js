@@ -28,14 +28,14 @@ const SidebarStyled = styled.div`
     top: 2%;
     left: 92%;
     cursor: pointer;
-  @media (max-width: 600px) {
+    @media (max-width: 600px) {
       top: 2%;
       left: 88%;
     }
-  @media (max-width: 600px) {
+    @media (max-width: 600px) {
       top: 2%;
       left: 80%;
-  }
+    }
   }
   li {
     padding: 0;
@@ -67,7 +67,7 @@ export default function Sidebar({ toggled, setToggled }) {
         <span
           className="button-close"
           onClick={() => setToggled(true)}
-          onKeyDown={()=>{}}
+          onKeyDown={() => {}}
         >
           <BsX color="white" size="4rem" />
         </span>
@@ -92,7 +92,11 @@ export default function Sidebar({ toggled, setToggled }) {
           </Link>
         </li> */}
         <li>
-          <Link onClick={() => setToggled(true)} to="/Aboutme"  onKeyDown={()=>{}}>
+          <Link
+            onClick={() => setToggled(true)}
+            to="/Aboutme"
+            onKeyDown={() => {}}
+          >
             About Me
           </Link>
         </li>

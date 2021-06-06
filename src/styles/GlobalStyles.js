@@ -18,22 +18,5 @@ const GlobalStyles = createGlobalStyle`
     border-color: rgba(0,0,0,0.1);
     border-width: 1px;
   }
-  ::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgb(128, 128, 128);
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background:rgba(128, 128, 128,.33);
-}
 `;
 export default GlobalStyles;

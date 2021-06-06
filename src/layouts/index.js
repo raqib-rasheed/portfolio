@@ -1,11 +1,5 @@
 import React from "react";
 import { TransitionProvider, TransitionViews } from "gatsby-plugin-transitions";
-import styled from "styled-components";
-import ThemeContext from "../context/ThemeContext";
-
-const ThemeWrapper = styled.div`
-  background: ;
-`;
 
 const Layout = ({ location, children }) => {
   return (
@@ -32,7 +26,8 @@ const Layout = ({ location, children }) => {
         config: {
           duration: 0,
         },
-      }}>
+      }}
+    >
       <TransitionViews>{children}</TransitionViews>
     </TransitionProvider>
   );
