@@ -4,7 +4,7 @@ const HomePageStyled = styled.div`
   background-color: ${({ darkMode }) => (darkMode ? "black" : "white")};
   color: ${({ darkMode }) => (darkMode ? "white" : "black")};
   width: 100%;
-  height: 59.5vh;
+  height: 60.7vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,7 +13,9 @@ const HomePageStyled = styled.div`
   overflow: hidden !important;
 
   @media (max-width: 600px) {
-    height: 65vh;
+    height: 82vh;
+    padding-bottom: 0;
+    overflow: hidden !important;
   }
 
   h2 {

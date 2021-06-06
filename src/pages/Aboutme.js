@@ -3,14 +3,14 @@ import styled from "styled-components";
 import Nav from "../components/Nav";
 import { Link } from "gatsby";
 import SEO from "../components/SEO";
-import avatars from "../images/avatars.png";
+import avatars from "../images/avatars.webp";
 import ThemeContext from "../context/ThemeContext";
 
 const StyledAboutMe = styled.div`
   padding-bottom: 2rem;
   background-color: ${({ darkMode }) => (darkMode ? "black" : "white")};
   width: 100%;
-  height: 80vh;
+  height: 80.35vh;
   padding-top: 6rem;
   p {
     font-size: 1.25rem;

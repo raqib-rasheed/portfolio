@@ -5,7 +5,7 @@ import iconsArray from "../elemets/homeSocialmediaiconsArray";
 import { v4 as uuid } from "uuid";
 import HomePageStyled from "../styles/homepageStyles";
 import SEO from "../components/SEO";
-import avatars from "../images/avatars.png";
+import avatars from "../images/avatars.webp";
 import ThemeContext from "../context/ThemeContext";
 
 const HomePage = () => {

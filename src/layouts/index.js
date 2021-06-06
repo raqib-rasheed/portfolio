@@ -1,6 +1,5 @@
 import React from "react";
 import { TransitionProvider, TransitionViews } from "gatsby-plugin-transitions";
-import styled from "styled-components";
 
 const Layout = ({ location, children }) => {
   return (

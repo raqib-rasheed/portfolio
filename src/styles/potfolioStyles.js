@@ -79,4 +79,21 @@ export const PortfolioContentStyles = styled.div`
   @media (min-width: 1000px) {
     font-size: 24px;
   }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgb(128, 128, 128);
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(128, 128, 128, 0.33);
+  }
 `;
