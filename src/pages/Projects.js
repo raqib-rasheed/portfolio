@@ -24,14 +24,19 @@ export default function Portfolio({ data: { allSanityProjects } }) {
                   return (
                     <ProjectWrapper
                       key={uuid()}
-                      alt={(inx % 2 === 0).toString()}>
+                      alt={(inx % 2 === 0).toString()}
+                    >
                       <h3>{project.title}</h3>
                       <div className="project-description">
                         <h5>{project.description}</h5>
                       </div>
 
                       <Card darkMode={context.darkMode}>
-                        <a href={project.projectUrl} target="_blank">
+                        <a
+                          rel="noreferrer"
+                          href={project.projectUrl}
+                          target="_blank"
+                        >
                           <img
                             alt=""
                             className="screenshot-holder"

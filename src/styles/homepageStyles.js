@@ -4,18 +4,19 @@ const HomePageStyled = styled.div`
   background-color: ${({ darkMode }) => (darkMode ? "black" : "white")};
   color: ${({ darkMode }) => (darkMode ? "white" : "black")};
   width: 100%;
-  height: 60.7vh;
+  height: 61.95vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10rem 0;
   justify-content: start;
   overflow: hidden !important;
+  border-top: 1px solid black;
 
   @media (max-width: 600px) {
-    height: 82vh;
+    height: 73vh;
     padding-bottom: 0;
-    overflow: hidden !important;
+    padding-top: 3.5rem;
   }
 
   h2 {

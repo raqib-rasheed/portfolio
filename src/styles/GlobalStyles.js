@@ -13,7 +13,7 @@ const GlobalStyles = createGlobalStyle`
     padding:0;
     font-family: 'Oswald', sans-serif;
   }
-
+  
   fieldset {
     border-color: rgba(0,0,0,0.1);
     border-width: 1px;
