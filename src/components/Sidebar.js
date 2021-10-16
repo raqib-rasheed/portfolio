@@ -65,6 +65,9 @@ export default function Sidebar({ toggled, setToggled }) {
     <SidebarStyled>
       <ul className={toggled ? "closed" : ""}>
         <span
+          aria-label="close button"
+          role="button"
+          tabIndex={0}
           className="button-close"
           onClick={() => setToggled(true)}
           onKeyDown={() => {}}
