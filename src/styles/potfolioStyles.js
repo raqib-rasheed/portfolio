@@ -58,6 +58,7 @@ export const PortfolioContentStyles = styled.div`
     transition: all 1s ease;
     height: 100%;
     width: 100%;
+    padding-top: 2rem;
   }
   .project-description {
     margin: 0 auto;
@@ -65,10 +66,13 @@ export const PortfolioContentStyles = styled.div`
   h2 {
     margin: 0;
     padding: 1.75rem;
+    width: 42.8%;
+    margin: 0 auto;
+    border-radius: 4px 4px 0 0;
     text-align: center;
-    color: ${({ darkMode }) =>
-      darkMode ? "white !important" : "black !important"};
+    color: black;
     font-weight: 400;
+    background-color: ${({ darkMode }) => (darkMode ? "#f1f1f1" : "white")};
   }
   @media (max-width: 500px) {
     font-size: 17px;

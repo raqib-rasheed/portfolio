@@ -11,7 +11,7 @@ const HomePageStyled = styled.div`
   padding: 10rem 0;
   justify-content: start;
   overflow: hidden !important;
-  border-top: 1px solid black;
+  border-top: ${({ darkMode }) => (darkMode ? "1px solid black" : "")};
 
   @media (max-width: 600px) {
     height: 73vh;
