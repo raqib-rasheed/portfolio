@@ -17,7 +17,7 @@ const HomePage = () => {
             <div style={{ overflowX: "hidden" }}>
               <Nav darkMode={context.darkMode} />
               <HomePageStyled darkMode={context.darkMode}>
-                <p> Hey, I'm</p> <h2> Raqib Rasheed </h2>
+                <p> Hey, I'm</p> <h2> Raqib Abdul Rasheed </h2>
                 <div className="avatar-container">
                   <img
                     width="150px"
