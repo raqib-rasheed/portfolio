@@ -22,6 +22,7 @@ const HomePageStyled = styled.div`
   h2 {
     margin: 0 !important;
     padding: 0;
+      background-color: ${({ darkMode }) => (darkMode ? "black" : "white")};
   }
   .avatar-container {
     width: 10rem;
