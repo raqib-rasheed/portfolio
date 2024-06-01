@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { BsMoon, BsSun } from "react-icons/bs";
 
 const IconHolder = styled.div`
+  padding-top: 0.75rem;
   :hover {
     cursor: pointer;
   }

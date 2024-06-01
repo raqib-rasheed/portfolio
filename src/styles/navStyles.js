@@ -10,18 +10,29 @@ const StyledNav = styled.ul`
 
   li {
     list-style: none;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    :hover {
+      box-shadow: 0px 0px 8px 6px rgba(0, 0, 0, 0.1);
+    }
+    &.active-nav-item {
+      background: ${({ darkMode }) => (darkMode ? "white" : "black")};
+      a {
+        color: ${({ darkMode }) => (darkMode ? "black" : "white")};
+      }
+    }
     a {
       text-decoration: none;
       color: ${({ darkMode }) => (darkMode ? "white" : "black")};
-      font-size: 1.75rem;
-      :hover {
-        color: lightgrey;
-      }
+      font-size: 1.25rem;
     }
   }
   .toggler-container {
     margin: 0;
     padding: 0;
+    padding-top: 0.75rem;
 
     @media (max-width: 600px) {
       padding: 1.75rem;
@@ -37,13 +48,16 @@ const StyledNav = styled.ul`
     }
   }
   .nav-links-container {
-    width: 55%;
+    border: ${({ darkMode }) =>
+      darkMode ? "2px solid white" : "2px solid black"};
+    padding: 0.5rem 0;
+    width: 40%;
     display: flex;
+    border-radius: 10px;
     justify-content: space-around;
-    @media (max-width: 600px) {
+    @media (max-width: 1100px) {
       font-size: 0.75rem;
-      padding: 1.75rem;
-      width: 100%;
+      width: 60%;
       justify-content: space-between;
     }
     @media (max-width: 530px) {
@@ -51,7 +65,7 @@ const StyledNav = styled.ul`
     }
 
     @media (min-width: 1000px) {
-      width: 55%;
+      width: 40%;
     }
   }
 `;

@@ -19,10 +19,14 @@ const HomePageStyled = styled.div`
     padding-top: 3.5rem;
   }
 
+  h3 {
+    font-size: 1.25rem;
+  }
+
   h2 {
     margin: 0 !important;
     padding: 0;
-      background-color: ${({ darkMode }) => (darkMode ? "black" : "white")};
+    background-color: ${({ darkMode }) => (darkMode ? "black" : "white")};
   }
   .avatar-container {
     width: 10rem;
@@ -44,7 +48,7 @@ const HomePageStyled = styled.div`
         font-size: 1.25rem;
       }
       svg:hover {
-        transform: scale(1.45);
+        transform: scale(1.05);
       }
     }
   }

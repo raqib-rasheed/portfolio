@@ -14,7 +14,15 @@ const HomePage = () => {
       <ThemeContext.Consumer>
         {(context) => {
           return (
-            <div style={{ overflowX: "hidden" }}>
+            <div
+              style={{
+                height: "100vh",
+                display: "flex",
+                flexDirection: "column",
+                overflowX: "hidden",
+                justifyContent: "space-between",
+              }}
+            >
               <Nav darkMode={context.darkMode} />
               <HomePageStyled darkMode={context.darkMode}>
                 <p> Hey, I'm</p> <h2> Raqib Abdul Rasheed </h2>

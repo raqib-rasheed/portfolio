@@ -53,8 +53,10 @@ export default function Aboutme({
                 <p>
                   {contetArray[0].text}
                   <Link to="/Projects">{contetArray[1].text}</Link>
+                  <br />
+                  <br />
+                  {contetArray[2].text}
                 </p>
-                <p>{contetArray[2].text}</p>
               </div>
             </StyledAboutMe>
           );

@@ -12,7 +12,7 @@ export default function Blogs({ data }) {
     <>
       <Nav />
       <Container>
-        <TopicHighlight>
+        {/* <TopicHighlight>
           <div className="container">
             <h3>My coding Journey</h3>
             <Link to={blogDetails.to}>
@@ -22,9 +22,12 @@ export default function Blogs({ data }) {
               </div>
             </Link>
           </div>
-        </TopicHighlight>
-        <Topics>
-          <ul>
+        </TopicHighlight> */}
+        <h3 style={{ margin: "auto", marginTop: "2rem" }}>
+          Blogs Coming Soon...
+        </h3>
+        {/* <Topics>
+ <ul>
             {blogsArray.map((blog) => (
               <li key={uuid()}>
                 <Link
@@ -37,8 +40,8 @@ export default function Blogs({ data }) {
                 </Link>
               </li>
             ))}
-          </ul>
-        </Topics>
+          </ul> 
+        </Topics> */}
       </Container>
     </>
   );
