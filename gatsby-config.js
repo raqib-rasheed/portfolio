@@ -1,4 +1,4 @@
-const dotenv = require('dotenv');
+const dotenv = require("dotenv");
 dotenv.config();
 module.exports = {
   siteMetadata: {
@@ -17,7 +17,7 @@ module.exports = {
         projectId: "yys0eoto",
         dataset: "portfolio",
         watchMode: true,
-        token:process.env.SANITY_TOKEN,
+        token: process.env.SANITY_TOKEN,
       },
     },
   ],

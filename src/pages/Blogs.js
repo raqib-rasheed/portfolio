@@ -1,16 +1,10 @@
-import Nav from "../components/Nav";
 import * as React from "react";
-import { Link } from "gatsby";
-import { Container, TopicHighlight, Topics } from "../styles/BlogsStyles";
-import blogsArray from "../elemets/blogsDetailsArray";
-import { v4 as uuid } from "uuid";
-import { showDescription } from "../utils/blogDesplayDescription";
+import { Container } from "../styles/BlogsStyles";
 
 export default function Blogs({ data }) {
   const [blogDetails, setblogDetails] = React.useState("");
   return (
     <>
-      <Nav />
       <Container>
         {/* <TopicHighlight>
           <div className="container">

@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Nav from "../components/Nav";
 
 const BlogContents = styled.div`
   width: 70%;
@@ -13,7 +12,6 @@ export default function BlogLayout({ data }) {
   // } = data;
   return (
     <>
-      <Nav />
       <BlogContents>{/* <p>{content}</p> */}</BlogContents>
     </>
   );

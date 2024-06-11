@@ -25,14 +25,13 @@ export default function Nav() {
     }
     if (activeNavItem?.path !== activePage) {
       const config = navLinks.find((config) => config.path === activePage);
-      console.log({ config });
       setActiveNavItem(config);
     }
   }, [activeNavItem]);
 
-  function handleNavClick(navConfig) {
+  const handleNavItemClick = (navConfig) => {
     setActiveNavItem(navConfig);
-  }
+  };
 
   return (
     <>
@@ -46,17 +45,19 @@ export default function Nav() {
                     <GiHamburgerMenu onClick={displaySidebar} />
                   </div>
                   <div className="nav-links-container">
-                    {navLinks.map((navConfig) => (
-                      <li
-                        onClick={() => handleNavClick(navConfig)}
+                    {navLinks.map((navConfig, index) => (
+                      <Link
+                        key={`${index}` + navConfig.path}
                         className={
                           activeNavItem?.path === navConfig.path
                             ? "active-nav-item"
                             : ""
                         }
+                        onClick={() => handleNavItemClick(navConfig)}
+                        to={navConfig.path}
                       >
-                        <Link to={navConfig.path}>{navConfig.label}</Link>
-                      </li>
+                        <li>{navConfig.label}</li>
+                      </Link>
                     ))}
                   </div>
 

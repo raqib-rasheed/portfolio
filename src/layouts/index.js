@@ -1,11 +1,17 @@
 import React from "react";
-import { TransitionProvider, TransitionViews } from "gatsby-plugin-transitions";
+import Nav from "../components/Nav";
+import SEO from "../components/SEO";
+import avatars from "../images/avatars.webp";
+import GlobalStyles from "../styles/GlobalStyles";
 
-const Layout = ({ location, children }) => {
+const Layout = ({ children }) => {
   return (
-    <TransitionProvider location={location} mode="immediate">
-      <TransitionViews>{children}</TransitionViews>
-    </TransitionProvider>
+    <>
+      <GlobalStyles />
+      <SEO title="About Me" image={avatars && avatars} />
+      <Nav />
+      {children}
+    </>
   );
 };
 

@@ -6,14 +6,11 @@ import {
   ProjectWrapper,
 } from "../styles/potfolioStyles";
 import { v4 as uuid } from "uuid";
-import SEO from "../components/SEO";
 import ThemeContext from "../context/ThemeContext";
 
 export default function Portfolio({ data: { allSanityProjects } }) {
   return (
     <>
-      <SEO title="Raqib's Portfolio" />
-      <Nav />
       <ThemeContext.Consumer>
         {(context) => {
           return (

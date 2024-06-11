@@ -12,23 +12,27 @@ const StyledNav = styled.ul`
     list-style: none;
     padding: 0.5rem 1rem;
     border-radius: 1rem;
-    display: flex;
-    align-items: center;
+
+    cursor: pointer;
     :hover {
       box-shadow: 0px 0px 8px 6px rgba(0, 0, 0, 0.1);
     }
-    &.active-nav-item {
-      background: ${({ darkMode }) => (darkMode ? "white" : "black")};
-      a {
-        color: ${({ darkMode }) => (darkMode ? "black" : "white")};
-      }
-    }
-    a {
-      text-decoration: none;
-      color: ${({ darkMode }) => (darkMode ? "white" : "black")};
-      font-size: 1.25rem;
-    }
   }
+
+  a.active-nav-item {
+    background: ${({ darkMode }) => (darkMode ? "white" : "black")};
+    color: ${({ darkMode }) => (darkMode ? "black" : "white")};
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+    text-decoration: none;
+    color: ${({ darkMode }) => (darkMode ? "white" : "black")};
+    font-size: 1.25rem;
+  }
+
   .toggler-container {
     margin: 0;
     padding: 0;

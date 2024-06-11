@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Nav from "../components/Nav";
 import { Link } from "gatsby";
-import SEO from "../components/SEO";
-import avatars from "../images/avatars.webp";
 import ThemeContext from "../context/ThemeContext";
 
 const StyledAboutMe = styled.div`
@@ -43,8 +40,6 @@ export default function Aboutme({
   const contetArray = aboutmeContent.nodes[0]._rawBody[0].children;
   return (
     <>
-      <SEO title="About Me" image={avatars && avatars} />
-      <Nav />
       <ThemeContext.Consumer>
         {({ darkMode }) => {
           return (

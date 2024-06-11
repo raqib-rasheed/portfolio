@@ -4,14 +4,16 @@ const GlobalStyles = createGlobalStyle`
 :root {
     --white: #e6e9ed;
     --grey: #858589;
+    font-family: 'Inter Variable', sans-serif !important;
   }
 * {
   -webkit-user-select: none;
   }
+
   body {
     margin:0;
     padding:0;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Inter Variable', sans-serif !important;
   }
   
   fieldset {
