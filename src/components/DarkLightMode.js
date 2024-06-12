@@ -8,7 +8,7 @@ const IconHolder = styled.div`
     cursor: pointer;
   }
   @media (max-width: 600px) {
-    padding: 1.5rem;
+    padding: 1rem;
   }
 `;
 

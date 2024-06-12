@@ -1,6 +1,6 @@
 import * as React from "react";
 import Nav from "../components/Nav";
-import avatar from "../images/avatars.webp";
+import avatar from "../images/avatar.jpg";
 import iconsArray from "../elemets/homeSocialmediaiconsArray";
 import { v4 as uuid } from "uuid";
 import HomePageStyled from "../styles/homepageStyles";
@@ -16,7 +16,7 @@ const HomePage = () => {
           return (
             <div
               style={{
-                height: "100vh",
+                height: "calc(100vh - 78px)",
                 display: "flex",
                 flexDirection: "column",
                 overflowX: "hidden",
@@ -24,11 +24,12 @@ const HomePage = () => {
               }}
             >
               <HomePageStyled darkMode={context.darkMode}>
-                <p> Hey, I'm</p> <h2> Raqib Abdul Rasheed </h2>
+                <p className="hey-text"> Hey, I'm</p>{" "}
+                <h2> Raqib Abdul Rasheed </h2>
                 <div className="avatar-container">
                   <img
-                    width="150px"
-                    height="159px"
+                    width="180px"
+                    height="160px"
                     src={avatar}
                     alt="avataar"
                   />

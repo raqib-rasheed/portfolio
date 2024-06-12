@@ -3,15 +3,19 @@ import styled from "styled-components";
 const HomePageStyled = styled.div`
   background-color: ${({ darkMode }) => (darkMode ? "black" : "white")};
   color: ${({ darkMode }) => (darkMode ? "white" : "black")};
+  height: 100%;
   width: 100%;
-  height: 61.95vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10rem 0;
-  justify-content: start;
+  justify-content: center;
   overflow: hidden !important;
   border-top: ${({ darkMode }) => (darkMode ? "1px solid black" : "")};
+  padding-bottom: 1rem;
+
+  .hey-text {
+    margin: 0;
+  }
 
   @media (max-width: 600px) {
     height: 73vh;
@@ -21,10 +25,12 @@ const HomePageStyled = styled.div`
 
   h3 {
     font-size: 1.25rem;
+    margin: 0.25rem 0 !important;
   }
 
   h2 {
     margin: 0 !important;
+    margin-bottom: 0.5rem !important;
     padding: 0;
     background-color: ${({ darkMode }) => (darkMode ? "black" : "white")};
   }

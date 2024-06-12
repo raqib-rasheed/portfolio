@@ -2,6 +2,7 @@ import { Link } from "gatsby";
 import React from "react";
 import styled from "styled-components";
 import { BsX } from "react-icons/bs";
+import useNavConfig from "../utils/navConfig";
 
 const SidebarStyled = styled.div`
   width: 100vw;
@@ -60,7 +61,9 @@ const SidebarStyled = styled.div`
   }
 `;
 
-export default function Sidebar({ toggled, setToggled }) {
+export default function Sidebar({ toggled, setToggled, activeNavItem }) {
+  const navLinks = useNavConfig();
+
   return (
     <SidebarStyled>
       <ul className={toggled ? "closed" : ""}>
@@ -74,35 +77,21 @@ export default function Sidebar({ toggled, setToggled }) {
         >
           <BsX color="white" size="4rem" />
         </span>
-        <li>
-          <Link onClick={() => setToggled(true)} to="/">
-            Home
-          </Link>
-        </li>
-        {/* <li className="disabled">
-          <Link onClick={() => setToggled(true)} to="/Blogs/">
-            Blogs
-          </Link> 
-        </li> */}
-        <li>
-          <Link onClick={() => setToggled(true)} to="/Projects">
-            Projects
-          </Link>
-        </li>
-        {/* <li className="disabled">
-          <Link onClick={() => setToggled(true)} to="/Skills">
-            Skills
-          </Link>
-        </li> */}
-        <li>
-          <Link
-            onClick={() => setToggled(true)}
-            to="/Aboutme"
-            onKeyDown={() => {}}
-          >
-            About Me
-          </Link>
-        </li>
+
+        {navLinks.map((navConfig, index) => (
+          <li>
+            <Link
+              key={`${index}` + navConfig.path}
+              className={
+                activeNavItem?.path === navConfig.path ? "active-nav-item" : ""
+              }
+              onClick={() => setToggled(true)}
+              to={navConfig.path}
+            >
+              {navConfig.label}
+            </Link>
+          </li>
+        ))}
       </ul>
     </SidebarStyled>
   );

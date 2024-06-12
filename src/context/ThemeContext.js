@@ -7,14 +7,17 @@ const ThemeContext = React.createContext({
 
 const ThemeProvider = (props) => {
   const [darkMode, setDarkMode] = useState(false);
+
   const toggleDark = () => {
     localStorage.setItem("dark", darkMode);
     setDarkMode((prevState) => !prevState);
   };
+
   useEffect(() => {
     const lsDark = JSON.parse(localStorage.getItem("dark"));
     lsDark ? setDarkMode(true) : setDarkMode(false);
   }, []);
+
   return (
     <ThemeContext.Provider
       value={{

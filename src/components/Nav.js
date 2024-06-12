@@ -65,6 +65,7 @@ export default function Nav() {
                 </StyledNav>
               ) : (
                 <Sidebar
+                  activeNavItem={activeNavItem}
                   darkMode={darkMode}
                   toggled={toggled}
                   setToggled={setToggled}

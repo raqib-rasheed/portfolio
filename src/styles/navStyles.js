@@ -8,20 +8,30 @@ const StyledNav = styled.ul`
   justify-content: space-between;
   background-color: ${({ darkMode }) => (darkMode ? "black" : "white")};
 
+  @media (max-width: 600px) {
+    padding: 1.15rem !important;
+  }
+
   li {
     list-style: none;
     padding: 0.5rem 1rem;
-    border-radius: 1rem;
+    font-size: 1.25rem;
 
     cursor: pointer;
     :hover {
-      box-shadow: 0px 0px 8px 6px rgba(0, 0, 0, 0.1);
+      text-decoration: underline;
     }
   }
 
   a.active-nav-item {
-    background: ${({ darkMode }) => (darkMode ? "white" : "black")};
+    display: inline-block;
+    border-radius: 2rem;
+    margin: 0 2px;
+    background: ${({ darkMode }) => (darkMode ? "white" : "#0a0a09")};
     color: ${({ darkMode }) => (darkMode ? "black" : "white")};
+    li:hover {
+      text-decoration: none;
+    }
   }
 
   a {
@@ -30,7 +40,7 @@ const StyledNav = styled.ul`
     border-radius: 1rem;
     text-decoration: none;
     color: ${({ darkMode }) => (darkMode ? "white" : "black")};
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   .toggler-container {
@@ -39,7 +49,7 @@ const StyledNav = styled.ul`
     padding-top: 0.75rem;
 
     @media (max-width: 600px) {
-      padding: 1.75rem;
+      padding: 1.25rem;
     }
     svg {
       color: ${({ darkMode }) => (darkMode ? "white" : "black")};
@@ -51,25 +61,48 @@ const StyledNav = styled.ul`
       transform: rotate(90deg);
     }
   }
+
   .nav-links-container {
     border: ${({ darkMode }) =>
       darkMode ? "2px solid white" : "2px solid black"};
-    padding: 0.5rem 0;
-    width: 40%;
+    padding: 2px 0;
+    width: 70%;
+    max-width: 450px !important;
+    min-width: 330px !important;
     display: flex;
-    border-radius: 10px;
-    justify-content: space-around;
-    @media (max-width: 1100px) {
-      font-size: 0.75rem;
-      width: 60%;
-      justify-content: space-between;
+    border-radius: 1.75rem;
+    justify-content: space-between;
+
+    @media (max-width: 1000px) {
+      width: 40%;
+      li {
+        font-size: 0.85rem;
+      }
     }
-    @media (max-width: 530px) {
+
+    @media (max-width: 800px) {
+      li {
+        font-size: 0.75rem;
+      }
+      width: 55%;
+    }
+
+    @media (max-width: 605px) {
       display: none;
     }
 
     @media (min-width: 1000px) {
-      width: 40%;
+      width: 55%;
+      li {
+        font-size: 1.15rem;
+      }
+    }
+
+    @media (min-width: 1500px) {
+      li {
+        font-size: 1.25rem;
+        padding: 0.5rem 1.5rem;
+      }
     }
   }
 `;
