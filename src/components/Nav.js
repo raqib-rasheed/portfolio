@@ -13,6 +13,7 @@ export default function Nav() {
   function displaySidebar() {
     setToggled(!toggled);
   }
+
   return (
     <>
       <ThemeContext.Consumer>
@@ -34,6 +35,7 @@ export default function Nav() {
                     {/* <li>
               <Link to="/Blogs/">Blogs</Link>
             </li> */}
+
                     <li>
                       <Link to="/Projects">Projects</Link>
                     </li>
