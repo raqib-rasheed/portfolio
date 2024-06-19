@@ -17,22 +17,6 @@ export default function Nav() {
     setToggled(!toggled);
   }
 
-  useEffect(() => {
-    const activePage = window.location.pathname;
-    if (!activeNavItem?.path) {
-      setActiveNavItem(navLinks?.[0]);
-      return;
-    }
-    if (activeNavItem?.path !== activePage) {
-      const config = navLinks.find((config) => config.path === activePage);
-      setActiveNavItem(config);
-    }
-  }, [activeNavItem]);
-
-  const handleNavItemClick = (navConfig) => {
-    setActiveNavItem(navConfig);
-  };
-
   return (
     <>
       <ThemeContext.Consumer>
@@ -45,20 +29,19 @@ export default function Nav() {
                     <GiHamburgerMenu onClick={displaySidebar} />
                   </div>
                   <div className="nav-links-container">
-                    {navLinks.map((navConfig, index) => (
-                      <Link
-                        key={`${index}` + navConfig.path}
-                        className={
-                          activeNavItem?.path === navConfig.path
-                            ? "active-nav-item"
-                            : ""
-                        }
-                        onClick={() => handleNavItemClick(navConfig)}
-                        to={navConfig.path}
-                      >
-                        <li>{navConfig.label}</li>
-                      </Link>
-                    ))}
+                    <li>
+                      <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                      <Link to="/Aboutme">About Me</Link>
+                    </li>
+                    {/* <li>
+              <Link to="/Blogs/">Blogs</Link>
+            </li> */}
+
+                    <li>
+                      <Link to="/Projects">Projects</Link>
+                    </li>
                   </div>
 
                   <DarkLightMode toggleDark={toggleDark} darkMode={darkMode} />
