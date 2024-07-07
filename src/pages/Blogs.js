@@ -1,8 +1,9 @@
-import * as React from "react";
-import { Container } from "../styles/BlogsStyles";
+import * as React from 'react';
+import { Container } from '../styles/BlogsStyles';
+import { graphql } from 'gatsby';
 
 export default function Blogs({ data }) {
-  const [blogDetails, setblogDetails] = React.useState("");
+  const [blogDetails, setblogDetails] = React.useState('');
   return (
     <>
       <Container>
@@ -17,7 +18,7 @@ export default function Blogs({ data }) {
             </Link>
           </div>
         </TopicHighlight> */}
-        <h3 style={{ margin: "auto", marginTop: "2rem" }}>
+        <h3 style={{ margin: 'auto', marginTop: '2rem' }}>
           Blogs Coming Soon...
         </h3>
         {/* <Topics>
@@ -34,7 +35,7 @@ export default function Blogs({ data }) {
                 </Link>
               </li>
             ))}
-          </ul> 
+          </ul>
         </Topics> */}
       </Container>
     </>

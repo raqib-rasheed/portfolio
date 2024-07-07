@@ -1,5 +1,6 @@
-import React from "react";
-import BlogLayout from "../components/BlogLayout";
+import React from 'react';
+import BlogLayout from '../components/BlogLayout';
+import { graphql } from 'gatsby';
 
 export default function BlogFive({ data }) {
   return (

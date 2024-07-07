@@ -1,12 +1,13 @@
-import React from "react";
-import Nav from "../components/Nav";
+import React from 'react';
+import Nav from '../components/Nav';
 import {
   Card,
   PortfolioContentStyles,
   ProjectWrapper,
-} from "../styles/potfolioStyles";
-import { v4 as uuid } from "uuid";
-import ThemeContext from "../context/ThemeContext";
+} from '../styles/potfolioStyles';
+import { v4 as uuid } from 'uuid';
+import ThemeContext from '../context/ThemeContext';
+import { graphql } from 'gatsby';
 
 export default function Portfolio({ data: { allSanityProjects } }) {
   return (
@@ -37,7 +38,7 @@ export default function Portfolio({ data: { allSanityProjects } }) {
                           <img
                             alt=""
                             className="screenshot-holder"
-                            src={project.mainImage.asset.fluid.src}
+                            src={project.mainImage.asset.src}
                           />
                         </a>
                       </Card>
@@ -63,9 +64,7 @@ export const query = graphql`
         GitHubUrl
         mainImage {
           asset {
-            fluid {
-              src
-            }
+            url
           }
         }
       }

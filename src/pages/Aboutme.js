@@ -1,18 +1,20 @@
-import React from "react";
-import styled from "styled-components";
-import { Link } from "gatsby";
-import ThemeContext from "../context/ThemeContext";
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'gatsby';
+import ThemeContext from '../context/ThemeContext';
+import { graphql } from 'gatsby';
 
 const StyledAboutMe = styled.div`
   padding-bottom: 2rem;
-  background-color: ${({ darkMode }) => (darkMode ? "black" : "white")};
+  background-color: ${({ darkMode }) =>
+    darkMode ? 'black' : 'white'};
   width: 100%;
   height: 80.35vh;
   padding-top: 6rem;
   p {
     font-size: 1.25rem;
     padding: 0 3rem;
-    color: ${({ darkMode }) => (darkMode ? "black" : "white")};
+    color: ${({ darkMode }) => (darkMode ? 'black' : 'white')};
   }
   p:first-child {
     margin: 0;
@@ -22,7 +24,8 @@ const StyledAboutMe = styled.div`
     box-shadow: 19px 33px 38px -17px black;
     width: 50%;
     margin: 0 auto;
-    background-color: ${({ darkMode }) => (darkMode ? "white" : "black")};
+    background-color: ${({ darkMode }) =>
+      darkMode ? 'white' : 'black'};
     padding-bottom: 1rem;
     border-radius: 1rem;
     a {
