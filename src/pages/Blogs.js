@@ -3,7 +3,6 @@ import { Container } from '../styles/BlogsStyles';
 import { graphql } from 'gatsby';
 
 export default function Blogs({ data }) {
-  const [blogDetails, setblogDetails] = React.useState('');
   return (
     <>
       <Container>

@@ -1,12 +1,11 @@
-import * as React from "react";
-import Nav from "../components/Nav";
-import avatar from "../images/avatar.jpg";
-import iconsArray from "../elemets/homeSocialmediaiconsArray";
-import { v4 as uuid } from "uuid";
-import HomePageStyled from "../styles/homepageStyles";
-import SEO from "../components/SEO";
-import avatars from "../images/avatars.webp";
-import ThemeContext from "../context/ThemeContext";
+import * as React from 'react';
+import avatar from '../images/avatar.jpg';
+import iconsArray from '../elemets/homeSocialmediaiconsArray';
+import { v4 as uuid } from 'uuid';
+import HomePageStyled from '../styles/homepageStyles';
+import Seo from '../components/SEO';
+import avatars from '../images/avatars.webp';
+import ThemeContext from '../context/ThemeContext';
 
 const HomePage = () => {
   return (
@@ -16,15 +15,15 @@ const HomePage = () => {
           return (
             <div
               style={{
-                height: "calc(100vh - 78px)",
-                display: "flex",
-                flexDirection: "column",
-                overflowX: "hidden",
-                justifyContent: "space-between",
+                height: 'calc(100vh - 78px)',
+                display: 'flex',
+                flexDirection: 'column',
+                overflowX: 'hidden',
+                justifyContent: 'space-between',
               }}
             >
               <HomePageStyled darkMode={context.darkMode}>
-                <p className="hey-text"> Hey, I'm</p>{" "}
+                <p className="hey-text"> Hey, I'm</p>{' '}
                 <h2> Raqib Abdul Rasheed </h2>
                 <div className="avatar-container">
                   <img
@@ -52,7 +51,7 @@ const HomePage = () => {
           );
         }}
       </ThemeContext.Consumer>
-      <SEO image={avatars} title="Raqib Rasheed" />
+      <Seo image={avatars} title="Raqib Rasheed" />
     </>
   );
 };

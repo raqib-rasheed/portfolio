@@ -1,15 +1,12 @@
-import { Link } from "gatsby";
-import React, { useEffect } from "react";
-import ThemeContext from "../context/ThemeContext";
-import { GiHamburgerMenu } from "react-icons/gi";
-
-import StyledNav from "../styles/navStyles";
-import DarkLightMode from "./DarkLightMode";
-import Sidebar from "./Sidebar";
-import useNavConfig from "../utils/navConfig";
+import { Link } from 'gatsby';
+import React from 'react';
+import ThemeContext from '../context/ThemeContext';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import StyledNav from '../styles/navStyles';
+import DarkLightMode from './DarkLightMode';
+import Sidebar from './Sidebar';
 
 export default function Nav() {
-  const navLinks = useNavConfig();
   const [toggled, setToggled] = React.useState(true);
   const [activeNavItem, setActiveNavItem] = React.useState();
 
@@ -44,7 +41,10 @@ export default function Nav() {
                     </li>
                   </div>
 
-                  <DarkLightMode toggleDark={toggleDark} darkMode={darkMode} />
+                  <DarkLightMode
+                    toggleDark={toggleDark}
+                    darkMode={darkMode}
+                  />
                 </StyledNav>
               ) : (
                 <Sidebar
