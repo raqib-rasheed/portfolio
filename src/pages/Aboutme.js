@@ -50,10 +50,10 @@ export default function Aboutme({
               <div className="content-wrapper">
                 <p>
                   {contetArray[0].text}
-                  <Link to="/Projects">{contetArray[1].text}</Link>
+                  <Link to="/Projects">{contetArray[1]?.text}</Link>
                   <br />
                   <br />
-                  {contetArray[2].text}
+                  {contetArray[2]?.text}
                 </p>
               </div>
             </StyledAboutMe>
