@@ -9,6 +9,7 @@ import ThemeContext from '../context/ThemeContext';
 import { graphql } from 'gatsby';
 
 export default function Portfolio({ data: { allSanityProjects } }) {
+  console.log(allSanityProjects.nodes[0].mainImage.asset);
   return (
     <>
       <ThemeContext.Consumer>
@@ -37,7 +38,7 @@ export default function Portfolio({ data: { allSanityProjects } }) {
                           <img
                             alt=""
                             className="screenshot-holder"
-                            src={project.mainImage.asset.src}
+                            src={project.mainImage.asset.url}
                           />
                         </a>
                       </Card>
