@@ -1,16 +1,18 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const ProjectWrapper = styled.div`
   width: 40%;
   margin: 0 auto;
   padding: 1rem 3rem;
   color: ${(props) =>
-    props.alt === "true" ? "black !important" : "white !important"};
+    props.alt === 'true' ? 'black !important' : 'white !important'};
   background-color: ${(props) =>
-    props.alt === "true" ? "rgb(28,25,26)" : "rgba(240, 240, 240 ,0.83)"};
+    props.alt === 'true'
+      ? 'rgb(28,25,26)'
+      : 'rgba(240, 240, 240 ,0.83)'};
   h5 {
     color: ${({ alt }) =>
-      alt === "true" ? "white !important" : "black !important"};
+      alt === 'true' ? 'white !important' : 'black !important'};
     text-align: center;
     font-weight: lighter;
   }
@@ -18,7 +20,12 @@ export const ProjectWrapper = styled.div`
     justify-self: end;
     text-align: center;
     color: ${({ alt }) =>
-      alt === "true" ? "white !important" : "black !important"};
+      alt === 'true' ? 'white !important' : 'black !important'};
+  }
+
+  @media (max-width: 850px) {
+    width: 80%;
+    padding: 0.5rem 1rem;
   }
 `;
 
@@ -33,6 +40,7 @@ export const Card = styled.div`
   box-shadow: 6px 3px 9px black;
   margin-bottom: 4.5rem;
   display: flex;
+
   @media (max-width: 650px) {
     height: 9rem;
   }
@@ -48,7 +56,7 @@ export const Card = styled.div`
 `;
 export const PortfolioContentStyles = styled.div`
   background-color: ${({ darkMode }) =>
-    darkMode ? "black !important" : "white !important"};
+    darkMode ? 'black !important' : 'white !important'};
 
   .overlay {
     position: relative;
@@ -72,17 +80,28 @@ export const PortfolioContentStyles = styled.div`
     text-align: center;
     color: black;
     font-weight: 400;
-    background-color: ${({ darkMode }) => (darkMode ? "#f1f1f1" : "white")};
+    color: ${({ darkMode }) => (darkMode ? 'white' : 'black')};
+
+    @media (max-width: 500px) {
+      padding: 0.75rem;
+    }
   }
   @media (max-width: 500px) {
     font-size: 17px;
+
+    .overlay {
+      padding-top: 0;
+    }
   }
+
   @media (max-width: 400px) {
     font-size: 13px;
   }
+
   @media (min-width: 1000px) {
     font-size: 24px;
   }
+
   ::-webkit-scrollbar {
     width: 10px;
   }

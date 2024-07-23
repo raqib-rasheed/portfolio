@@ -1,7 +1,7 @@
 import React from 'react';
 import Nav from '../components/Nav';
 import Seo from '../components/SEO';
-import avatars from '../images/avatars.webp';
+import avatars from '../images/avatar.jpg';
 import GlobalStyles from '../styles/GlobalStyles';
 
 const Layout = ({ children }) => {

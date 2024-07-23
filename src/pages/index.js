@@ -4,7 +4,6 @@ import iconsArray from '../elemets/homeSocialmediaiconsArray';
 import { v4 as uuid } from 'uuid';
 import HomePageStyled from '../styles/homepageStyles';
 import Seo from '../components/SEO';
-import avatars from '../images/avatars.webp';
 import ThemeContext from '../context/ThemeContext';
 
 const HomePage = () => {
@@ -15,7 +14,7 @@ const HomePage = () => {
           return (
             <div
               style={{
-                height: 'calc(100vh - 78px)',
+                height: 'calc(100vh - 150px)',
                 display: 'flex',
                 flexDirection: 'column',
                 overflowX: 'hidden',
@@ -51,7 +50,7 @@ const HomePage = () => {
           );
         }}
       </ThemeContext.Consumer>
-      <Seo image={avatars} title="Raqib Rasheed" />
+      <Seo image={avatar} title="Raqib Rasheed" />
     </>
   );
 };

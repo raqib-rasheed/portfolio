@@ -7,9 +7,9 @@ import {
 import { v4 as uuid } from 'uuid';
 import ThemeContext from '../context/ThemeContext';
 import { graphql } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 
 export default function Portfolio({ data: { allSanityProjects } }) {
-  console.log(allSanityProjects.nodes[0].mainImage.asset);
   return (
     <>
       <ThemeContext.Consumer>
@@ -17,7 +17,6 @@ export default function Portfolio({ data: { allSanityProjects } }) {
           return (
             <PortfolioContentStyles darkMode={context.darkMode}>
               <div className="overlay">
-                <h2>Take a look at my projects</h2>
                 {allSanityProjects.nodes.map((project, inx) => {
                   return (
                     <ProjectWrapper
@@ -35,7 +34,7 @@ export default function Portfolio({ data: { allSanityProjects } }) {
                           href={project.projectUrl}
                           target="_blank"
                         >
-                          <img
+                          <StaticImage
                             alt=""
                             className="screenshot-holder"
                             src={project.mainImage.asset.url}
@@ -56,7 +55,7 @@ export default function Portfolio({ data: { allSanityProjects } }) {
 
 export const query = graphql`
   query {
-    allSanityProjects(sort: { fields: sequencenumber }) {
+    allSanityProjects(sort: { sequencenumber: ASC }) {
       nodes {
         projectUrl
         description
