@@ -14,7 +14,7 @@ const HomePage = () => {
           return (
             <div
               style={{
-                height: 'calc(100vh - 150px)',
+                height: 'calc(100vh - 75px)',
                 display: 'flex',
                 flexDirection: 'column',
                 overflowX: 'hidden',

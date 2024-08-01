@@ -20,7 +20,7 @@ const HomePageStyled = styled.div`
   }
 
   @media (max-width: 600px) {
-    height: 73vh;
+    height: 80vh;
     padding-bottom: 0;
     padding-top: 3.5rem;
   }
