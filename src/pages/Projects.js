@@ -10,6 +10,7 @@ import { graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 
 export default function Portfolio({ data: { allSanityProjects } }) {
+  console.log({ allSanityProjects });
   return (
     <>
       <ThemeContext.Consumer>
@@ -34,7 +35,7 @@ export default function Portfolio({ data: { allSanityProjects } }) {
                           href={project.projectUrl}
                           target="_blank"
                         >
-                          <StaticImage
+                          <img
                             alt=""
                             className="screenshot-holder"
                             src={project.mainImage.asset.url}
